@@ -68,7 +68,7 @@ abstract class BookDB : RoomDatabase() {
             super.onCreate(db)
             instance?.let {
                 scope.launch {
-
+                    // insert all datta in both the tables
                     Common.getAllCategories(it.categoryDao())
                     Common.getAllBooks(it.bookDao())
 
