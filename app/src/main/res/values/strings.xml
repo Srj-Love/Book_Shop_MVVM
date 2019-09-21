@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Udemy MVVM</string>
+    <string name="title_activity_shop">ShopActivity</string>
+</resources>
