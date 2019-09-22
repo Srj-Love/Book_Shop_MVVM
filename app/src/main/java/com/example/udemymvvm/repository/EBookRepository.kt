@@ -15,7 +15,7 @@ class EBookRepository(application: Application) {
     private var categoryDao: CategoryDao? = null
     private var bookDao: BookDao? = null
 
-    private val categories: LiveData<List<Category>>?
+    public val categories: LiveData<List<Category>>?
         get() = categoryDao?.getAllCategories()
 
     private var books: LiveData<List<Book>>? = null
