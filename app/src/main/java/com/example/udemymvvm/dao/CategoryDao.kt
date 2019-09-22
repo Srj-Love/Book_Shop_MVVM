@@ -17,5 +17,5 @@ interface CategoryDao {
     fun delete(category: Category)
 
     @Query("SELECT * FROM categories_table")
-    fun getAllCategories(): LiveData<Category>
+    fun getAllCategories(): LiveData<List<Category>>
 }

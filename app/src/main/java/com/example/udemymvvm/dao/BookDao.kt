@@ -8,18 +8,18 @@ import com.example.udemymvvm.model.Book
 interface BookDao {
 
     @Insert
-    fun insert(Book: Book)
+    fun insert(book: Book)
 
     @Update
-    fun update(Book: Book)
+    fun update(book: Book)
 
     @Delete
-    fun delete(Book: Book)
+    fun delete(book: Book)
 
     @Query("SELECT * FROM book_table")
-    fun getAllBooks(): LiveData<Book>
+    fun getAllBooks(): LiveData<List<Book>>
 
     // category_id==:categoryId :-- Use : to  mention parameter data
     @Query("SELECT * FROM book_table WHERE category_id==:categoryId")
-    fun getBook(categoryId: Int): LiveData<Book>
+    fun getBook(categoryId: Int): LiveData<List<Book>>
 }
